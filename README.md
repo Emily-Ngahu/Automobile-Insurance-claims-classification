@@ -62,12 +62,13 @@ The dataset has the following columns:
        3. 'property_damage' 360 has null values
        4.  'police_report_available' has 343 null values.
         Since most of our data is categorical data, we will fill the null values with the mode.
-    ## Data checks
+    ## Data insights 
     1. The youngest customer is aged 19 and the eldest is aged 64
     2. The lowest policy deductible is 500 an dthe highest is 2000.
     3. The lowest annual premium is 433 an dthe highest is 2048.
     4. Most accidents have happend at 5pm.(Maybe because of rush hour)
     5. The lowest total claim amount is 100 and the highest is 114920.
+
     ## Exploratory data analysis
     1. ### Univariate EDA
        1. Distribution of Customer Age
@@ -75,22 +76,22 @@ The dataset has the following columns:
           
           ![image](https://github.com/user-attachments/assets/f4178fa5-ba3a-4917-adc0-c12ec3246c08)
 
-       3. Distribution of Policy Annual Premium
+       2. Distribution of Policy Annual Premium
           - Question: What is the distribution of annual premiums? Are there any outliers or unusual patterns?
           
           ![image](https://github.com/user-attachments/assets/e2639602-89ff-4539-b707-5d19d14923a3)
 
-       5. Distribution of total claim amount
+       3. Distribution of total claim amount
           - Question: What is the distribution of the total claim amounts? Are there any significant outliers or trends?
 
           ![image](https://github.com/user-attachments/assets/8bd1a831-ff4d-4b1d-baa1-2bb6e612c390)
 
-       6. Proportion of fraud_reported
+       4. Proportion of fraud_reported
           - Question: What proportion of claims have fraud reported? Is the fraud rate high or low?
 
           ![image](https://github.com/user-attachments/assets/37c836dd-50be-43ea-959f-6ebfb2bdd440)
 
-        9. Distribution of incident_severity
+        5. Distribution of incident_severity
             - Question: How severe are the incidents reported? Are there more incidents with higher or lower severity
            
            ![image](https://github.com/user-attachments/assets/d2752c67-f3e7-40a1-92d0-6a52fbcbe11b)
@@ -103,52 +104,63 @@ The dataset has the following columns:
            ![image](https://github.com/user-attachments/assets/d3495f0e-af68-49fe-b5ee-ce12869c421b)
 
 
-       3. policy_annual_premium vs. total_claim_amount
+       2. policy_annual_premium vs. total_claim_amount
           - Question: How does the policy annual premium relate to the total claim amount? Are higher premiums associated with higher claims?
 
            ![image](https://github.com/user-attachments/assets/5de37d20-ba44-432b-b293-ebb911bed731)
 
 
-       5. insured_sex vs. fraud_reported
+       3. insured_sex vs. fraud_reported
           - Question: Is there a difference in fraud reporting between different genders? Does gender have an impact on fraud detection?
 
            ![image](https://github.com/user-attachments/assets/1073573d-e4cd-4dee-8b19-135eaf743b3f)
 
 
-       7. policy_state vs. fraud_reported
+       4. policy_state vs. fraud_reported
           - Question: Are there any states where fraud is reported more frequently? Does the state have an impact on fraud incidence?
 
            ![image](https://github.com/user-attachments/assets/f646f0c8-5af6-4c37-a726-cd25f179b4fb)
    
-       8. incident state vs. fraud_reported
+       5. incident state vs. fraud_reported
           - Question: Are there any states where fraud is reported more frequently? Does the state have an impact on fraud incidence?
             
            ![image](https://github.com/user-attachments/assets/ae3a4247-e99c-489e-bfa9-c42f53518a1f)
 
 
 
-       10. incident_type vs. total_claim_amount
+       6. incident_type vs. total_claim_amount
            - Question: How does the type of incident affect the total claim amount? Are certain types of incidents associated with higher claims?
 
            ![image](https://github.com/user-attachments/assets/6633ee50-7f58-4442-ad91-42b5979662fa)
 
 
-       11. insured_education_level vs. fraud_reported
+       7. insured_education_level vs. fraud_reported
            - Question: Does the education level of the insured have any correlation with fraud reporting? Are higher education levels associated with different fraud rates?
 
             ![image](https://github.com/user-attachments/assets/1bc70538-664b-4202-a858-3253dad27492)
 
           
-       13. incident_hour_of_the_day vs. total_claim_amount
+       8. incident_hour_of_the_day vs. total_claim_amount
            - Question: Are there specific hours of the day that are associated with higher claim amounts? Does the time of day influence claim size?
 
            ![image](https://github.com/user-attachments/assets/f8fcdf56-76c2-45ab-bcca-c6c6e05b028a)
 
 
-       12. incident type vs fraud reported
+       9. incident type vs fraud reported
            - Question : Are certain types of incidents more likely to be associated with fraud?
            
             ![image](https://github.com/user-attachments/assets/1610fe6c-f5cd-430c-acc5-16a74854db0d)
+          
+       10. What is the distribution of males and females?
+           
+            ![image](https://github.com/user-attachments/assets/bc53180d-9570-44c1-bc6a-c3c70cf7d4cd)
+       
+       11. What is the distribution of the relationship of the insured.
+
+            ![image](https://github.com/user-attachments/assets/eb1cd27e-5268-470b-bacf-af9eb42eac3e)
+
+           
+
  
 
             
