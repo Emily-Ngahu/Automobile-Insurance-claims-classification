@@ -158,6 +158,11 @@ The dataset has the following columns:
        11. What is the distribution of the relationship of the insured.
 
             ![image](https://github.com/user-attachments/assets/eb1cd27e-5268-470b-bacf-af9eb42eac3e)
+           
+       ## Model training
+       1. Data preparation
+          - Since some of our columns have an object data type and machine learning models only works with numerical data types we have to encode these colums.
+            
 
            
 
