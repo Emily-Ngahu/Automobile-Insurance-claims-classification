@@ -1,4 +1,4 @@
-# Automobile-Insurance-claims-prediction
+# Automobile-Insurance-claims-classification
 ## Project Aim
 The aim is to build a classification  model that can determine the likelihood of a claim being filed as fraudulent or legitimate. 
 This model will help insurance companies:
