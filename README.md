@@ -1,6 +1,6 @@
 # Automobile-Insurance-claims-prediction
 ## Project Aim
-The aim is to build a predictive model that can determine the likelihood of a claim being filed as fraudulent or legitimate. 
+The aim is to build a classification  model that can determine the likelihood of a claim being filed as fraudulent or legitimate. 
 This model will help insurance companies:
 1. Detect Fraud: By identifying patterns and predicting the probability of fraudulent claims, companies can reduce losses due to fraudulent activity.
 2. Optimize Claims Processing: A predictive model can assist in flagging claims that require more scrutiny, allowing for a more efficient and focused investigation process.
@@ -175,8 +175,60 @@ The dataset has the following columns:
             4. Train and test set
           - The ratio of 70:30 was used.
             ### Models
-            In this project 
-            
+            In this project we will use the following models:
+            1. Suport Vector Classifier
+               - The SVC is a supervised learning model used for classification tasks. It finds the hyperplane that best 
+                 separates different classes in the feature space. The goal is to maximize the margin between the
+                 hyperplane and the closest data points (called support vectors) from each class. It can also handle non
+                 linear data using kernel tricks.
+            2. KNN(K nearest neighbours)
+               - KNN is a simple, non-parametric classification method. It classifies new data points based on the majority
+                 class of its K nearest neighbors in the training dataset. The distance between data points is usually
+                 measured using Euclidean distance. It’s easy to implement but can be slow with large datasets and
+                 sensitive to irrelevant features.
+            3. Decision Tree classifier
+               - This is a tree-based classifier where decisions are made by splitting the data at each node based on a
+                 feature that best separates the classes. Each leaf node represents a class label, and the branches
+                 represent the combination of features leading to that class. It’s easy to interpret but prone to
+                 overfitting.
+            4. Random forest classifier
+               - Random Forest is an ensemble method that builds multiple decision trees during training and outputs the
+                 mode (most frequent) of the class predictions from all trees. It reduces overfitting by averaging multiple
+                 trees, making it more robust and accurate compared to a single decision tree.
+            5. Ada Boost Classifier
+               - AdaBoost (Adaptive Boosting) is another ensemble technique that combines multiple weak classifiers
+                 (usually decision trees with a single split, called stumps) to create a strong classifier. It adjusts the
+                 weights of misclassified samples after each iteration to focus more on difficult cases. It's sensitive to
+                 noisy data but performs well on clean datasets.
+            6. XgBoost Classifier
+                - XGBoost (Extreme Gradient Boosting) is a powerful, efficient implementation of gradient boosting that
+                  improves performance through techniques like regularization, parallelization, and handling missing
+                  values. It builds models sequentially, with each model correcting the errors of its predecessor, and it’s
+                  particularly popular in machine learning competitions due to its high accuracy.
+            7. Voting Classifier
+                - A Voting Classifier is an ensemble method that combines the predictions of different models (e.g., SVC,
+                  KNN, Random Forest) by majority voting for classification tasks. There are two types of voting: hard
+                  voting (majority class wins) and soft voting (average probabilities of predictions). It improves overall
+                  model performance by leveraging the strengths of different algorithms.
+               and them compare them.
+## Model coparison 
+The models are compared based on their performance. 
+### Model Performance
+
+| Model               | Score   |
+|---------------------|---------|
+| Ada Boost           | 0.853333|
+| Random Forest       | 0.823333|
+| XgBoost             | 0.816667|
+| Decision Tree       | 0.810000|
+| Voting Classifier   | 0.800000|
+| SVC                 | 0.760000|
+| KNN                 | 0.760000|
+
+
+ ![image](https://github.com/user-attachments/assets/471763af-256c-43f8-8c9e-c3dac5a19554)
+ 
+Based on the scores above, Ada Boost is the best model with the highest performance score of 0.853333. This indicates that Ada Boost has the best classification accuracy compared to the other models for my dataset. 
       
             
 
