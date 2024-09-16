@@ -162,6 +162,22 @@ The dataset has the following columns:
        ## Model training
        1. Data preparation
           - Since some of our columns have an object data type and machine learning models only works with numerical data types we have to encode these colums.
+            1. Data encoding
+          - The data was encoded using label encoder.
+            2. Feature selection
+          - A correlation matrix was created showing correlation coefficients between variables
+          - The p values for each feature was calculated
+          -  Using a logic test with a significance value of 5% (p-value < 0.05), we only keep the significant features
+            3. Finding and removing the highly correlated features
+          - We also need to look for predictor variable pairs which have a high correlation with each other to avoid autocorrelation.
+          - Vehicle claim and total claim amount are highly correlated, considering which predictor variable to drop, vehicle claim is slightly better correlated (and lower
+            p-value) to the dependent variable fraud reported, so let's drop total claim amount from the feature dataframe.
+            4. Train and test set
+          - The ratio of 70:30 was used.
+            ### Models
+            In this project 
+            
+      
             
 
            
