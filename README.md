@@ -1,6 +1,6 @@
 # Automobile-Insurance-claims-classification
 ## Project Aim
-The aim is to build a classification  model that can determine the likelihood of a claim being filed as fraudulent or legitimate. This project compares 7 classification model by performance and picks the model that best suites the data. 
+This project focuses on building a machine learning classification model to predict whether an automobile insurance claim is fraudulent or legitimate. Using a dataset containing various features related to policyholder details, vehicle information, and claim incidents, seven classification models are evaluated based on their performance. The goal is to identify the most accurate model to effectively detect fraudulent claims, thereby improving efficiency in insurance claim processing and fraud prevention.
 This model will help insurance companies:
 1. Detect Fraud: By identifying patterns and predicting the probability of fraudulent claims, companies can reduce losses due to fraudulent activity.
 2. Optimize Claims Processing: A predictive model can assist in flagging claims that require more scrutiny, allowing for a more efficient and focused investigation process.
