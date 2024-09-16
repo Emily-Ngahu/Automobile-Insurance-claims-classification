@@ -10,7 +10,7 @@ This model will help insurance companies:
    ## Tools used
    1. Python 
 ## Data 
-The data used in this project was downloaded from kaggle and and be gotten [here](https://www.kaggle.com/datasets/buntyshah/auto-insurance-claims-data?select=insurance_claims.csv)
+The data used in this project was downloaded from kaggle and and be downloaded [here](https://www.kaggle.com/datasets/buntyshah/auto-insurance-claims-data?select=insurance_claims.csv)
 ### Data description 
 The dataset has the following columns: 
 1. months_as_customer - This describes the number of months a customer has been in business with the insurance company. 
@@ -76,26 +76,37 @@ The dataset has the following columns:
           
           ![image](https://github.com/user-attachments/assets/f4178fa5-ba3a-4917-adc0-c12ec3246c08)
 
+          - Most customers are aged between ages 25- 50.
+          - The bar plot has a longer tail to the right, it’s right-skewed (many older customers with fewer younger ones).
+
        2. Distribution of Policy Annual Premium
           - Question: What is the distribution of annual premiums? Are there any outliers or unusual patterns?
           
           ![image](https://github.com/user-attachments/assets/e2639602-89ff-4539-b707-5d19d14923a3)
+
+          - Annual policy premium is normally distributed  
 
        3. Distribution of total claim amount
           - Question: What is the distribution of the total claim amounts? Are there any significant outliers or trends?
 
           ![image](https://github.com/user-attachments/assets/8bd1a831-ff4d-4b1d-baa1-2bb6e612c390)
 
+          - The plot is mostly normaly distributed with total claims being zero as an outlier, this is howvwer no cause for alarm as it is normal to hav eno claims filed.
+
        4. Proportion of fraud_reported
           - Question: What proportion of claims have fraud reported? Is the fraud rate high or low?
 
           ![image](https://github.com/user-attachments/assets/37c836dd-50be-43ea-959f-6ebfb2bdd440)
+
+          - Most of the reported cases are non-fradulent
+          - This causes class imbalance 
 
         5. Distribution of incident_severity
             - Question: How severe are the incidents reported? Are there more incidents with higher or lower severity
            
            ![image](https://github.com/user-attachments/assets/d2752c67-f3e7-40a1-92d0-6a52fbcbe11b)
 
+            - As seen on the graph above most accidents are minor car damages.
 
     2. ### Multivariate EDA
        1. Age vs. total_claim_amount
@@ -103,59 +114,54 @@ The dataset has the following columns:
 
            ![image](https://github.com/user-attachments/assets/d3495f0e-af68-49fe-b5ee-ce12869c421b)
 
-
        2. policy_annual_premium vs. total_claim_amount
           - Question: How does the policy annual premium relate to the total claim amount? Are higher premiums associated with higher claims?
 
            ![image](https://github.com/user-attachments/assets/5de37d20-ba44-432b-b293-ebb911bed731)
 
-
-       3. insured_sex vs. fraud_reported
+      3. insured_sex vs. fraud_reported
           - Question: Is there a difference in fraud reporting between different genders? Does gender have an impact on fraud detection?
 
            ![image](https://github.com/user-attachments/assets/1073573d-e4cd-4dee-8b19-135eaf743b3f)
+   
+          - Most of the fradulent claims were made by females. 
 
-
-       4. policy_state vs. fraud_reported
+      4. policy_state vs. fraud_reported
           - Question: Are there any states where fraud is reported more frequently? Does the state have an impact on fraud incidence?
 
            ![image](https://github.com/user-attachments/assets/f646f0c8-5af6-4c37-a726-cd25f179b4fb)
+   
+          - Most of the fradulent claims were reported in ohio and the least fraudulent cases in Indiana.
    
        5. incident state vs. fraud_reported
           - Question: Are there any states where fraud is reported more frequently? Does the state have an impact on fraud incidence?
             
            ![image](https://github.com/user-attachments/assets/ae3a4247-e99c-489e-bfa9-c42f53518a1f)
+          
 
-
-
-       6. incident_type vs. total_claim_amount
-           - Question: How does the type of incident affect the total claim amount? Are certain types of incidents associated with higher claims?
-
-           ![image](https://github.com/user-attachments/assets/6633ee50-7f58-4442-ad91-42b5979662fa)
-
-
-       7. insured_education_level vs. fraud_reported
+          - New York has the lowest incidence of fraudulent claims, while South Carolina reports the highest frequency of fraud. 
+   
+      6. insured_education_level vs. fraud_reported
            - Question: Does the education level of the insured have any correlation with fraud reporting? Are higher education levels associated with different fraud rates?
 
-            ![image](https://github.com/user-attachments/assets/1bc70538-664b-4202-a858-3253dad27492)
+            ![image](https://github.com/user-attachments/assets/99bd5ba8-673b-4ce5-ab68-f56992a01064)
+   
+           -  most fraud claims were made by Juris Doctors (Doctor of Law) and least fraud claims made by collage graduates.
 
-          
-       8. incident_hour_of_the_day vs. total_claim_amount
-           - Question: Are there specific hours of the day that are associated with higher claim amounts? Does the time of day influence claim size?
-
-           ![image](https://github.com/user-attachments/assets/f8fcdf56-76c2-45ab-bcca-c6c6e05b028a)
-
-
-       9. incident type vs fraud reported
+      7. incident type vs fraud reported
            - Question : Are certain types of incidents more likely to be associated with fraud?
            
             ![image](https://github.com/user-attachments/assets/1610fe6c-f5cd-430c-acc5-16a74854db0d)
+   
+           - Most of the fraud claims were made by people involved in single vehicle collision and the least fraud claims by peple involved in vehicle theft incidents.
           
-       10. What is the distribution of males and females?
+       8. What is the distribution of males and females?
            
             ![image](https://github.com/user-attachments/assets/bc53180d-9570-44c1-bc6a-c3c70cf7d4cd)
+
+           - Males contribute to 53.70% of the dataset and females contribute to 46.30% of the dataset. 
        
-       11. What is the distribution of the relationship of the insured.
+       9. What is the distribution of the relationship of the insured.
 
             ![image](https://github.com/user-attachments/assets/eb1cd27e-5268-470b-bacf-af9eb42eac3e)
            
@@ -210,8 +216,11 @@ The dataset has the following columns:
                   KNN, Random Forest) by majority voting for classification tasks. There are two types of voting: hard
                   voting (majority class wins) and soft voting (average probabilities of predictions). It improves overall
                   model performance by leveraging the strengths of different algorithms.
-               and them compare them.
-## Model coparison 
+                  and them compare them.
+
+All the models were trained using the train set and the test set was used to predict. The models perfomance was then assesed and hyper parameter tuning (read [here](https://www.geeksforgeeks.org/hyperparameter-tuning/) for more explanation) was done. 
+
+## Model comparison 
 The models are compared based on their performance. 
 ### Model Performance
 
