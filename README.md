@@ -8,7 +8,8 @@ This model will help insurance companies:
 4. Risk Management: The model can provide insights into high-risk claims or customers, helping companies better manage their risk portfolios.
 5. Cost Reduction: Efficient claim predictions can lead to reduced investigative and operational costs.
    ## Tools used
-   1. Python 
+   1. Python
+   - The project was done using jupyter notebook. 
 ## Data 
 The data used in this project was downloaded from kaggle and and be downloaded [here](https://www.kaggle.com/datasets/buntyshah/auto-insurance-claims-data?select=insurance_claims.csv)
 ### Data description 
@@ -62,6 +63,7 @@ The dataset has the following columns:
        3. 'property_damage' 360 has null values
        4.  'police_report_available' has 343 null values.
         Since most of our data is categorical data, we will fill the null values with the mode.
+    4. Checking for outliers 
     ## Data insights 
     1. The youngest customer is aged 19 and the eldest is aged 64
     2. The lowest policy deductible is 500 an dthe highest is 2000.
@@ -170,16 +172,20 @@ The dataset has the following columns:
           - Since some of our columns have an object data type and machine learning models only works with numerical data types we have to encode these colums.
             1. Data encoding
           - The data was encoded using label encoder.
-            2. Feature selection
-          - A correlation matrix was created showing correlation coefficients between variables
-          - The p values for each feature was calculated
-          -  Using a logic test with a significance value of 5% (p-value < 0.05), we only keep the significant features
-            3. Finding and removing the highly correlated features
+            
+       2. Feature selection
+          - A correlation matrix was created showing correlation coefficients between variables.
+          - The p values for each feature was calculated.
+          -  Using a logic test with a significance value of 5% (p-value < 0.05), we only keep the significant features.
+            
+       3. Finding and removing the highly correlated features
           - We also need to look for predictor variable pairs which have a high correlation with each other to avoid autocorrelation.
           - Vehicle claim and total claim amount are highly correlated, considering which predictor variable to drop, vehicle claim is slightly better correlated (and lower
             p-value) to the dependent variable fraud reported, so let's drop total claim amount from the feature dataframe.
-            4. Train and test set
+            
+       4. Train and test set
           - The ratio of 70:30 was used.
+            
             ### Models
             In this project we will use the following models:
             1. Suport Vector Classifier
